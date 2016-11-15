@@ -691,7 +691,7 @@ hr.stripes{
 	height:10px;
 }
 hr.fat{
-	border-top:4px solid #191143;
+	border-top:4px double #191143;
 }
 hr.mini{
 	width:30%;
