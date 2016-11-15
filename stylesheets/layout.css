@@ -528,16 +528,14 @@ video {
 #main h2,
 #main h3,
 #main h4{
-	color:#333;
+	color:#191143;
 }
 
 h1.page-title,
 h2.page-title{
 	margin-bottom:.3em; /*.9em; /*1.5em;*/
 	font-size:2.6em;
-	color:#333;
 	font-weight:bolder;
-	color:#555;
 	text-transform:uppercase;
 }
 h2.page-title{
@@ -1069,35 +1067,6 @@ input[type="button"].button-lighttext{
 	color:#f9f9f9 !important;
 	text-shadow:0px -1px 1px rgba(0,0,0,.3) !important;
 }
-
-
-
-
-/* #Tabs
-============================================= */
-
-ul.tabs{
-	margin-top:2em;
-}
-ul.tabs li a{
-	background:#f5f5f5 url(../images/bkgs/stripes_tiny_05.png) repeat;
-}
-ul.tabs li a.active{
-	border-top:2px solid #444;
-	top:-5px;
-}
-ul.tabs-content{
-	border-bottom:1px solid #eee;
-	padding-bottom:1em;
-	margin-bottom:2em;
-}
-ul.tabs-content li{
-	font-size:.9em;
-}
-
-
-
-
 
 /* #Tables
 ============================================== */
