@@ -17,27 +17,7 @@ jQuery(document).ready(function($){
 	var currentWindowWidth = $(window).width();
 	$(window).resize(function(){
 		currentWindowWidth = $(window).width();
-	});
-	
-	/* FLEX SLIDER */
-	var $flexSlider = $('.flexslider');
-	$flexSlider.flexslider({
-		animation: "slide",
-		controlsContainer: ".flex-container",
-		prevText: "&larr;",
-		nextText: "&rarr;",
-		pausePlay:true,
-		pauseOnHover:true,
-		before:	function($slider){
-			$slider.find('.flex-caption').fadeOut('fast');			
-		},
-		after: function($slider){
-			$slider.find('.flex-caption').fadeIn();			
-		}
-	});
-	$('.height-expand').each(function(){
-		$(this).height($(this).prev().height());
-	});
+	});	
 	
 	/* DROP PANEL */
 	$('#drop-panel-expando').click(function(e){
@@ -137,57 +117,6 @@ jQuery(document).ready(function($){
 	//HTML5 Fallbacks
 	if(!Modernizr.input.placeholder){
 		$('.fallback').show();
-	}
-	
-	//Google Maps
-	if(typeof google.maps.LatLng !== 'undefined'){
-		$('.map_canvas').each(function(){
-			
-			var $canvas = $(this);
-			var dataZoom = $canvas.attr('data-zoom') ? parseInt($canvas.attr('data-zoom')) : 8;
-			
-			var latlng = $canvas.attr('data-lat') ? 
-							new google.maps.LatLng($canvas.attr('data-lat'), $canvas.attr('data-lng')) :
-							new google.maps.LatLng(40.7143528, -74.0059731);
-					
-			var myOptions = {
-				zoom: dataZoom,
-				mapTypeId: google.maps.MapTypeId.ROADMAP,
-				center: latlng
-			};
-					
-			var map = new google.maps.Map(this, myOptions);
-			
-			if($canvas.attr('data-address')){
-				var geocoder = new google.maps.Geocoder();
-				geocoder.geocode({ 
-						'address' : $canvas.attr('data-address') 
-					},
-					function(results, status) {					
-						if (status == google.maps.GeocoderStatus.OK) {
-							map.setCenter(results[0].geometry.location);
-							var marker = new google.maps.Marker({
-								map: map,
-								position: results[0].geometry.location,
-								title: $canvas.attr('data-mapTitle')
-							});
-						}
-				});
-			}
-		});
-	}
-	
-	//Twitter
-	if($('#tweet').size() > 0){
-		getTwitters('tweet', { 
-			id: 'sevenspark', 
-			count: 1, 
-			enableLinks: true, 
-			ignoreReplies: true, 
-			clearContents: true,
-			template: '%text% <a href="http://twitter.com/%user_screen_name%/statuses/%id_str%/" class="tweet-time" target="_blank">%time%</a>'+
-						'<a href="http://twitter.com/%user_screen_name%" class="twitter-account" title="Follow %user_screen_name% on Twitter" target="_blank" ><img src="%user_profile_image_url%" /></a>'
-		});
 	}
 	
 });
