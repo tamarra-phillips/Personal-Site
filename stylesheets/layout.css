@@ -399,8 +399,6 @@ a.img-link.preload {
 a[data-rel^="prettyPhoto"]{
 	position:relative;
 	text-decoration:none;
-	background-image:url(../images/bkgs/stripes_tiny_08.png);
-	background-repeat:repeat;
 }
 a.img-link.preload,
 a[data-rel^="prettyPhoto"]{
@@ -582,6 +580,7 @@ h5.sub-page-title{
 .portfolio article a.img-link{
 	display:block;
 	clear:both;
+	max-height: 330px;
 }
 #main .portfolio-item.single .img-wrapper{
 	padding-right:0;
@@ -663,106 +662,6 @@ h5.sub-page-title{
 }
 .nav-next{
 	text-align:right;
-}
-
-
-
-
-/* #Single Posts
-============================================== */
-
-.single p{
-	line-height:1.8em;
-	color:#555;
-}
-.single header{
-	background:transparent url(../images/bkgs/stripes_tiny_08.png) bottom left repeat-x;
-	margin-bottom:2em;
-	padding-bottom:.2em;
-}
-#main .single.post header h1{
-	margin-bottom:.3em;
-}
-.single header h5.sub-page-title{
-	margin-bottom:.8em;
-}
-.single .post-meta{
-	padding:1em 0 .5em 0;
-	margin-bottom:2em;
-}
-#main .single .img-wrapper{	
-	width:50%;
-	float:left;
-	padding:0 2em 2em 0;
-	
-	-webkit-transition: width .2s ease-in-out;
-	-moz-transition: width .2s ease-in-out;
-	-o-transition: width .2s ease-in-out;
-	transition: width .2s ease-in-out;
-}
-#main .single .img-wrapper.full-width{
-	width:100%;
-}
-.single .featured-image{
-	position:relative;
-}
-.single-post-feature-expander:hover{
-	color:#444;
-}
-.single .featured-video{
-	margin-bottom:2em;
-	position:relative;
-	clear:both;
-}
-.inline-video-lightbox-content{
-	display:none;
-}
-.single-post-feature-expander{
-	position:absolute;
-	right:2em;
-	bottom:5px;
-	padding:3px;
-	cursor:pointer;
-	text-decoration:none;
-	color:#ccc;
-}
-
-.post-content .alignleft{
-	float:left;
-	margin:.5em 1.5em .5em 0;
-}
-
-.post-content .alignright{
-	float:right;
-	margin:.5em 0 .5em 1.5em;
-}
-
-
-/* Author Bios */
-#author-bio{
-	clear:both;
-}
-.author-bio-blurb{
-	font-size:12px;
-	font-style:italic;
-	color:#777;
-}
-
-.single-post-extra{
-	clear:both;
-	position:relative;
-	margin-top:2em;
-	padding-top:3em;
-	background:transparent url(../images/bkgs/stripes_tiny_08.png) top left repeat-x;
-}
-
-.single-post-extra h6{
-	position:absolute;
-	top:1em;
-	left:0;
-	font-size:9px;
-	color:#999;
-	text-transform:uppercase;
 }
 
 
@@ -1198,8 +1097,17 @@ a.social-media.tooltip-container{
 /* #Images
 ============================================== */
 .img-center{
-	margin: auto;
-    width: 200px
+	margin:auto;
+    width:200px
+}
+
+.main-image{
+	text-align:center;
+}
+
+.feature-column img{
+	min-height: 170px;
+    max-height: 200px;
 }
 
 /* #Footer
