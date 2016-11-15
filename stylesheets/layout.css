@@ -780,6 +780,15 @@ blockquote.pullquote cite{
 /* #Lists
 ====================================================== */
 
+ul{
+	list-style:disc outside;
+	margin:0 0 0 25px;
+}
+
+.nested{
+	list-style-type:circle;
+}
+
 ul.checkmark{
 	list-style-image: url(../images/icons/tick.png);
 }
